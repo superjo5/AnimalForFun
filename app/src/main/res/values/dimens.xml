@@ -2,7 +2,6 @@
 <resources>
     <string name="h1">30sp</string>
     <string name="h2">16sp</string>
-
     <string name="my_image">150dp</string>
     <string name="my_margin">15dp</string>
     <string name="my_iconvolumn">40dp</string>
