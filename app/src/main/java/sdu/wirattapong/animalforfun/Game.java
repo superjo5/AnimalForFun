@@ -137,7 +137,7 @@ public class Game extends AppCompatActivity {
             mediaPlayer = MediaPlayer.create(this, R.raw.horse);
 
             ArrayList<String> choice = new ArrayList<String>();
-            choice.add("นก");
+            choice.add("สุนัข");
             choice.add("ม้า");
             choice.add("หมู");
             choice.add("แกะ");
@@ -148,7 +148,7 @@ public class Game extends AppCompatActivity {
             btn4.setText(choice.remove(0));
         }
         if (qID == 7) {
-            answer = "เสือ";
+            answer = "สิงโต";
             QuestionImageView.setImageResource(R.drawable.lion_02);
             mediaPlayer = MediaPlayer.create(this, R.raw.lion);
 
@@ -156,7 +156,7 @@ public class Game extends AppCompatActivity {
             choice.add("นก");
             choice.add("ช้าง");
             choice.add("หมู");
-            choice.add("เสือ");
+            choice.add("สิงโต");
             Collections.shuffle(choice);
             btn1.setText(choice.remove(0));
             btn2.setText(choice.remove(0));
@@ -230,7 +230,8 @@ public class Game extends AppCompatActivity {
 
     private void Dialogbox() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setTitle("คุณได้คะแนน" + score + "คะแนน")
+        builder.setIcon(R.drawable.icon);
+        builder.setTitle("คุณได้คะแนน" +  score + " คะแนน")
                 .setCancelable(false)
                 .setPositiveButton("Exit", new DialogInterface.OnClickListener() {
                     @Override
@@ -246,6 +247,7 @@ public class Game extends AppCompatActivity {
                         startActivity(intent);
                     }
                 });
+
         AlertDialog alert = builder.create();
         alert.show();
 
