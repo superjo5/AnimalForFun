@@ -30,8 +30,9 @@ public class MainActivity extends AppCompatActivity {
                 } else {
                     nameString = editText.getText().toString().trim();
 
-                    Toast.makeText(getApplicationContext(), "Hello" + nameString, Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "Hello " + nameString, Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(MainActivity.this, Game.class);
+                    intent.putExtra("name",nameString);
                     startActivity(intent);
                 }
             }
